@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataModel, TodoItem } from './model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todoApp';
+  model = new DataModel();
+
+  public GetName(){
+    return this.model.Name;
+  }
+
+  public GetItems(){
+    return this.model.Items;
+  }
 }
